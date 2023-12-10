@@ -1,5 +1,5 @@
 <template>
-    <b-container class="d-flex justify-content-center align-items-center">
+    <b-container class="centered-container">
       <slot></slot>
     </b-container>
 </template>
