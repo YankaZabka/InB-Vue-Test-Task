@@ -1,5 +1,4 @@
 <template>
-  <fragment>
     <b-container class="main-container">
 
       <transition name="slide-fade">
@@ -7,8 +6,7 @@
         <EditInfo v-else @toggleView="toggleView" />
       </transition>
 
-      </b-container>
-  </fragment>
+    </b-container>
 </template>
 
 <script>
@@ -26,7 +24,6 @@ export default {
   },
   methods: {
     toggleView() {
-      console.log("toggleView", this.ViewMode)
       this.ViewMode = !this.ViewMode
     }
   }

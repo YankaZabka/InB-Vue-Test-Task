@@ -45,7 +45,6 @@ export default {
 
 <style scoped>
 .input-element {
-  font-family: OpenSans, sans-serif;
   color: #FDFDFD;
   font-weight: 400;
   font-size: 20px;

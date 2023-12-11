@@ -3,6 +3,7 @@
     <HeaderItem/>
     <MainContent>
       <LoanInfo/>
+      <UserInfo/>
     </MainContent>
   </div>
 </template>
@@ -12,6 +13,7 @@ import * as C from './components'
 export default {
   name: 'App',
   components: {
+    UserInfo: C.UserInfo,
     MainContent: C.MainContent,
     HeaderItem: C.HeaderItem,
     LoanInfo: C.LoanInfo
