@@ -11,7 +11,7 @@
           </b-col>
 
           <b-col class="d-flex justify-content-end align-items-center">
-            <div class="icon-button centered-container header-button" role="button">
+            <div class="icon-button header-button" role="button">
               <img :src="HeaderButton" alt="HeaderButton">
             </div>
           </b-col>

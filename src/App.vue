@@ -25,10 +25,6 @@ export default {
   src: url('~@/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf');
 }
 
-body {
-  font-family: OpenSans, sans-serif;
-}
-
 .centered-container {
   display: flex;
   justify-content: center;
@@ -36,9 +32,15 @@ body {
 }
 
 .icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 34px;
   height: 34px;
 
   border-radius: 50%;
+
+  cursor: pointer;
 }
 </style>
