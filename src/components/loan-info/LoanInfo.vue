@@ -1,5 +1,5 @@
 <template>
-    <b-container class="main-container">
+    <b-container class="main-container d-flex">
 
       <transition name="slide-fade">
         <ViewInfo v-if="ViewMode" @toggleView="toggleView" />
@@ -33,13 +33,15 @@ export default {
 <style scoped>
 .main-container {
   background-color: #2B0A57;
-  height: 58px;
+  min-height: 58px;
   border-radius: 30px;
   max-width: 800px;
 
   margin-bottom: 10px;
 
   color: #FDFDFD;
+
+  padding: 13px;
 }
 
 .slide-fade-enter-active {

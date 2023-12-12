@@ -1,11 +1,11 @@
 <template>
-    <b-row class="h-100">
+    <b-row class="w-100 flex-grow-1">
 
       <b-col cols="1" class="centered-container">
         <div class="icon-button" @click="toggleView"><img :src="LoanButtonLeft" alt="LoanButtonLeft"></div>
       </b-col>
 
-      <b-col cols="10" class="d-flex justify-content-center">
+      <b-col cols="10" class="d-flex justify-content-center flex-wrap">
         <div class="final-text centered-container">Your loan application</div>
         <div class="final-sum centered-container">2700<sup>€</sup> / 36 months</div>
       </b-col>
