@@ -1,13 +1,12 @@
 <template>
   <b-container class="main-container">
-    <b-container class="wrapper">
 
-      <b-row class="first-row">
-        <b-col cols="1"></b-col>
-        <b-col cols="10">
+      <b-row class="first-row mx-3">
+        <b-col cols="2"></b-col>
+        <b-col cols="8">
           <div class="centered-container user-name-text">Anna Maria Tamm Rodriguez Espinosa</div>
         </b-col>
-        <b-col cols="1">
+        <b-col cols="2" class="d-flex justify-content-end">
           <div class="icon-button toggle-button" @click="toggleView">
             <img :src="UserEditInfoButton" alt="UserEditInfoButton" >
           </div>
@@ -15,27 +14,26 @@
       </b-row>
 
       <b-row class="second-row align-items-center">
-        <b-col>
-          <div class="d-flex justify-content-end align-items-center" style="gap: 6px">
+        <b-col sm="12" md="4">
+          <div class="d-flex justify-content-center justify-content-md-end align-items-center" style="gap: 6px">
             <img :src="UserIdIcon" alt="UserIdIcon" >
             <div class="user-info-text">38912052254</div>
           </div>
         </b-col>
-        <b-col>
+        <b-col sm="12" md="4">
           <div class="centered-container" style="gap: 6px">
             <img :src="UserPhoneIcon" alt="UserPhoneIcon" >
             <div class="user-info-text">{{ infoData.userPhone }}</div>
           </div>
         </b-col>
-        <b-col>
-          <div class="d-flex justify-content-start align-items-center" style="gap: 6px">
+        <b-col sm="12" md="4">
+          <div class="d-flex justify-content-center justify-content-md-start align-items-center" style="gap: 6px">
             <img :src="UserMailIcon" alt="UserMailIcon" >
             <div class="user-info-text">{{ infoData.userMail }}</div>
           </div>
         </b-col>
       </b-row>
 
-    </b-container>
   </b-container>
 </template>
 <script>
@@ -62,7 +60,8 @@ export default {
 <style scoped>
 .main-container {
   background-color: #F8F5FC;
-  height: 105px;
+  height: 210px;
+  overflow: hidden;
 
   border: 5px solid #F3EEFB;
   border-radius: 30px;
@@ -72,6 +71,12 @@ export default {
   padding: 0;
 
   color: #FDFDFD;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    height: 105px;
+  }
 }
 
 .wrapper {
