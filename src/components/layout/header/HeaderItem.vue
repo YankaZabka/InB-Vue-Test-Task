@@ -1,7 +1,6 @@
 <template>
     <b-navbar class="py-4">
-      <b-container>
-        <b-row class="w-100">
+        <b-row class="flex-grow-1">
           <b-col></b-col>
 
           <b-col class="d-flex justify-content-center">
@@ -10,14 +9,13 @@
             </b-navbar-brand>
           </b-col>
 
-          <b-col class="d-flex justify-content-end align-items-center">
+          <b-col class="d-flex justify-content-center align-items-center">
             <div class="icon-button header-button" role="button">
               <img :src="HeaderButton" alt="HeaderButton">
             </div>
           </b-col>
 
         </b-row>
-      </b-container>
     </b-navbar>
 </template>
 
