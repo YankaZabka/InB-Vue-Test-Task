@@ -1,15 +1,16 @@
 <template>
-    <b-row class="h-100">
-      <b-col cols="1"></b-col>
-
-      <b-col cols="10" class="centered-container" style="gap: 12px">
+    <b-row class="h-100 flex-grow-1">
+      <b-col md="4" sm="12" class="d-flex justify-content-center justify-content-md-end flex-grow-1">
         <TextInput label="Amount" additional-label="200 - 10 000 €"/>
-        <TextInput label="Duration" :additional-label="false"/>
-        <SummaryItem/>
       </b-col>
 
-      <b-col cols="1" class="centered-container">
-        <div class="icon-button toggle-button" @click="toggleView"><img :src="LoanButtonRight" alt="LoanButtonRight"></div>
+      <b-col md="3" sm="12">
+        <TextInput label="Duration" :additional-label="false"/>
+      </b-col>
+
+      <b-col md="5" sm="12" class="d-flex justify-content-between align-items-center">
+        <SummaryItem/>
+        <div class="icon-button toggle-button flex-shrink-0" @click="toggleView"><img :src="LoanButtonRight" alt="LoanButtonRight"></div>
       </b-col>
     </b-row>
 </template>

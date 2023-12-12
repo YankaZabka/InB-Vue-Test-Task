@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper d-flex justify-content-center align-items-center" style="gap: 12px">
+  <div class="wrapper d-flex justify-content-center align-items-center flex-shrink-0" style="gap: 12px">
     <div style="font-weight: 300">Monthly Payment</div>
     <div>95,27<sup>€</sup></div>
   </div>
