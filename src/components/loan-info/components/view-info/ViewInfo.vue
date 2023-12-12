@@ -1,5 +1,4 @@
 <template>
-<!--  <b-container class="main-container">-->
     <b-row class="h-100">
 
       <b-col cols="1" class="centered-container">
@@ -13,7 +12,6 @@
 
       <b-col cols="1"></b-col>
     </b-row>
-<!--  </b-container>-->
 </template>
 <script>
 import * as A from "@/assets"

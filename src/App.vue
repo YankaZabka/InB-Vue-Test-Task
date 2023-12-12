@@ -2,8 +2,11 @@
   <div id="app">
     <HeaderItem/>
     <MainContent>
+
       <LoanInfo/>
       <UserInfo/>
+
+      <PersonalData/>
     </MainContent>
   </div>
 </template>
@@ -16,7 +19,8 @@ export default {
     UserInfo: C.UserInfo,
     MainContent: C.MainContent,
     HeaderItem: C.HeaderItem,
-    LoanInfo: C.LoanInfo
+    LoanInfo: C.LoanInfo,
+    PersonalData: C.PersonalData
   }
 }
 </script>
