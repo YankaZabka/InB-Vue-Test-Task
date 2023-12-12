@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center" style="width: 320px">
+  <div class="d-flex justify-content-between align-items-center w-100">
     <b-form-checkbox v-model="checked" class="purple-checkbox">
       Check me out
     </b-form-checkbox>
