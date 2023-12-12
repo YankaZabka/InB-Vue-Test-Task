@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import * as A from "../../assets"
+import * as A from "@/assets"
 
 export default {
   data: function () {

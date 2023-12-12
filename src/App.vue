@@ -7,6 +7,18 @@
       <UserInfo/>
 
       <PersonalData/>
+
+      <DividerItem text="Or"/>
+
+      <CustomToggleSwitcher/>
+
+      <DividerItem />
+
+      <CustomCheckboxInput/>
+      <CustomCheckboxInput/>
+
+      <ContinueButton/>
+
     </MainContent>
   </div>
 </template>
@@ -16,11 +28,15 @@ import * as C from './components'
 export default {
   name: 'App',
   components: {
+    CustomCheckboxInput: C.Inputs.CustomCheckBoxInput,
     UserInfo: C.UserInfo,
-    MainContent: C.MainContent,
-    HeaderItem: C.HeaderItem,
+    MainContent: C.Layout.MainContent,
+    HeaderItem: C.Layout.HeaderItem,
     LoanInfo: C.LoanInfo,
-    PersonalData: C.PersonalData
+    PersonalData: C.PersonalData,
+    CustomToggleSwitcher: C.Inputs.CustomToggleSwitcher,
+    DividerItem: C.DividerItem,
+    ContinueButton: C.ContinueButton,
   }
 }
 </script>
