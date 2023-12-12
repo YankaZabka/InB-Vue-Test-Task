@@ -8,7 +8,7 @@
         @blur="isFocused = false"
         :disabled="isDisabled"
         type="text"
-        v-model="inputValue"
+        v-model="selectedValue"
     >
       <option v-for="option in options" :value="option" :key="option">
         {{ option }}
@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      inputValue: '',
+      selectedValue: this.options[0],
       isFocused: false,
     };
   },
