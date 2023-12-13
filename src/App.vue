@@ -14,7 +14,13 @@
       <DividerItem />
 
       <CustomCheckboxInput label="Neither I nor my family member is PEP" modalId="1"/>
+      <FamilyMemberPepInfo />
+
       <CustomCheckboxInput label="I’m the ultimate beneficiary" modalId="2"/>
+      <UltimateBeneficiaryInfo/>
+
+      <CustomCheckboxInput label="The beneficial owner is not a PEP" modalId="3"/>
+      <OwnerPepInfo/>
 
       <ContinueButton />
     </MainContent>
@@ -35,6 +41,9 @@ export default {
     CustomToggleSwitcher: C.Inputs.CustomToggleSwitcher,
     DividerItem: C.DividerItem,
     ContinueButton: C.ContinueButton,
+    FamilyMemberPepInfo: C.FamilyMemberPepInfo,
+    UltimateBeneficiaryInfo: C.UltimateBeneficiaryInfo,
+    OwnerPepInfo: C.OwnerPepInfo,
   },
 };
 </script>
