@@ -9,18 +9,31 @@
 
       <DividerItem text="Or" />
 
-      <CustomToggleSwitcher label="Add address manually"/>
+      <CustomToggleSwitcher label="Add address manually" />
 
       <DividerItem />
 
-      <CustomCheckboxInput label="Neither I nor my family member is PEP" modalId="1"/>
-      <FamilyMemberPepInfo />
+      <CustomCheckboxInput
+        label="Neither I nor my family member is PEP"
+        modalId="1"
+        @onChange="showFamilyMemberPepInfo = !showFamilyMemberPepInfo"
+      />
+      <FamilyMemberPepInfo v-if="showFamilyMemberPepInfo" />
 
-      <CustomCheckboxInput label="I’m the ultimate beneficiary" modalId="2"/>
-      <UltimateBeneficiaryInfo/>
+      <CustomCheckboxInput
+        label="I’m the ultimate beneficiary"
+        modalId="2"
+        @onChange="showUltimateBeneficiaryInfo = !showUltimateBeneficiaryInfo"
+      />
+      <UltimateBeneficiaryInfo v-if="showUltimateBeneficiaryInfo" />
 
-      <CustomCheckboxInput label="The beneficial owner is not a PEP" modalId="3"/>
-      <OwnerPepInfo/>
+      <CustomCheckboxInput
+        label="The beneficial owner is not a PEP"
+        modalId="3"
+        v-if="showUltimateBeneficiaryInfo"
+        @onChange="showOwnerPepInfo = !showOwnerPepInfo"
+      />
+      <OwnerPepInfo v-if="showUltimateBeneficiaryInfo && showOwnerPepInfo" />
 
       <ContinueButton />
     </MainContent>
@@ -44,6 +57,13 @@ export default {
     FamilyMemberPepInfo: C.FamilyMemberPepInfo,
     UltimateBeneficiaryInfo: C.UltimateBeneficiaryInfo,
     OwnerPepInfo: C.OwnerPepInfo,
+  },
+  data: function () {
+    return {
+      showFamilyMemberPepInfo: false,
+      showUltimateBeneficiaryInfo: false,
+      showOwnerPepInfo: false,
+    };
   },
 };
 </script>

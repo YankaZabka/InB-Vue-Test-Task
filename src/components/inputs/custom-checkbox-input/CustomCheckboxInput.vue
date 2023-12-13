@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 500px">
-    <b-form-checkbox v-model="checked" class="purple-checkbox">
+    <b-form-checkbox v-model="checked" class="purple-checkbox" @change="onCheckBoxChange">
       {{ label }}
     </b-form-checkbox>
 
@@ -30,6 +30,11 @@ export default {
       checked: false,
       CheckboxInfoIcon: A.CheckboxInfoIcon,
     };
+  },
+  methods: {
+    onCheckBoxChange() {
+      this.$emit("onChange");
+    },
   },
 };
 </script>
