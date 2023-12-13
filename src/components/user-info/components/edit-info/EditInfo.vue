@@ -13,7 +13,7 @@
       <b-col
         sm="12"
         md="7"
-        class="centered-container my-sm-2 my-md-0 justify-content-md-start"
+        class="centered-container my-2 my-md-0 justify-content-md-start"
         style="gap: 20px"
       >
         <div class="centered-container" style="gap: 6px">
