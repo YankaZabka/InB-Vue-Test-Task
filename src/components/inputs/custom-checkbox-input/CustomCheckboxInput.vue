@@ -15,8 +15,14 @@
       <img :src="CheckboxInfoIcon" alt="Info" />
     </div>
 
-    <b-modal :id="modalId" hide-footer centered title="BootstrapVue">
-      <p class="my-4">Hello from modal!</p>
+    <b-modal :id="modalId" hide-footer centered title="PEP">
+      <p class="my-4 modal-content-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
     </b-modal>
   </div>
 </template>
@@ -46,7 +52,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .purple-checkbox input[type="checkbox"]:checked + label::before {
   background-color: #2b0a57;
   border-color: #2b0a57;
@@ -54,5 +60,10 @@ export default {
 
 .purple-checkbox input[type="checkbox"]:checked + label::after {
   color: #2b0a57;
+}
+
+.modal-content-text {
+  font-size: 16px;
+  line-height: 24px;
 }
 </style>

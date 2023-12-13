@@ -18,12 +18,20 @@
         modalId="1"
         @onChange="showFamilyMemberPepInfo = !showFamilyMemberPepInfo"
       />
-      <FamilyMemberPepInfo v-if="showFamilyMemberPepInfo" />
+      <FamilyMemberPepInfo
+        v-if="showFamilyMemberPepInfo"
+        :class="{
+          'slide-in': showFamilyMemberPepInfo,
+        }"
+      />
 
       <CustomCheckboxInput
         label="I’m the ultimate beneficiary"
         modalId="2"
         @onChange="showUltimateBeneficiaryInfo = !showUltimateBeneficiaryInfo"
+        :class="{
+          'slide-in': showUltimateBeneficiaryInfo,
+        }"
       />
       <UltimateBeneficiaryInfo v-if="showUltimateBeneficiaryInfo" />
 
@@ -32,6 +40,9 @@
         modalId="3"
         v-if="showUltimateBeneficiaryInfo"
         @onChange="showOwnerPepInfo = !showOwnerPepInfo"
+        :class="{
+          'slide-in': showOwnerPepInfo,
+        }"
       />
       <OwnerPepInfo v-if="showUltimateBeneficiaryInfo && showOwnerPepInfo" />
 
@@ -99,6 +110,12 @@ export default {
 
 .slide-out {
   animation: slideOut 0.3s ease forwards;
+}
+
+.modal-open .modal-backdrop {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1 !important;
 }
 
 @keyframes slideIn {
