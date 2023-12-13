@@ -30,7 +30,7 @@
       sm="12"
       class="d-flex justify-content-between align-items-center"
     >
-      <SummaryItem :loanData="loanData"/>
+      <SummaryItem :loanData="loanData" />
       <div class="icon-button toggle-button flex-shrink-0" @click="toggleView">
         <img :src="LoanButtonRight" alt="LoanButtonRight" />
       </div>

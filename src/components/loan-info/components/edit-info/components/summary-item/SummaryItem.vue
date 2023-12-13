@@ -4,7 +4,9 @@
     style="gap: 12px"
   >
     <div style="font-weight: 300">Monthly Payment</div>
-    <div>{{ (loanData.amount / loanData.duration).toFixed(1) }}<sup>€</sup></div>
+    <div>
+      {{ (loanData.amount / loanData.duration).toFixed(1) }}<sup>€</sup>
+    </div>
   </div>
 </template>
 <script>

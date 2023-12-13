@@ -156,7 +156,7 @@ export default {
 
 .filter-applied {
   filter: invert(25%) sepia(85%) saturate(6000%) hue-rotate(250deg)
-  brightness(50%) contrast(100%);
+    brightness(50%) contrast(100%);
 }
 
 .validation-error {

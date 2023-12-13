@@ -1,1 +1,1 @@
-export {default} from './OwnerPepInfo.vue'
+export { default } from "./OwnerPepInfo.vue";

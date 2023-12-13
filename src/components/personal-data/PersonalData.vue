@@ -17,7 +17,7 @@
 
     <b-row class="mb-3">
       <b-col>
-        <CustomSelectInput :options="cities" placeholder="City / Parish"/>
+        <CustomSelectInput :options="cities" placeholder="City / Parish" />
       </b-col>
       <b-col>
         <CustomTextInput :options="cities" placeholder="Village / Township" />
@@ -43,7 +43,7 @@
 <script>
 import CustomTextInput from "@/components/inputs/custom-text-input/CustomTextInput.vue";
 import CustomSelectInput from "@/components/inputs/custom-select-input/CustomSelectInput.vue";
-import * as D from "@/duck"
+import * as D from "@/duck";
 
 export default {
   components: {
@@ -53,13 +53,15 @@ export default {
   data: function () {
     return {
       cities: D.constants.CITIES,
-      countries: D.constants.COUNTRIES
+      countries: D.constants.COUNTRIES,
     };
   },
 };
 </script>
 <style scoped>
->>> .col, .col-2, .col-6 {
+>>> .col,
+.col-2,
+.col-6 {
   padding: 0 10px;
 }
 

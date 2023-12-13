@@ -1,1 +1,1 @@
-export {default} from './UltimateBeneficiaryInfo.vue'
+export { default } from "./UltimateBeneficiaryInfo.vue";

@@ -31,7 +31,7 @@
 <script>
 import CustomTextInput from "@/components/inputs/custom-text-input/CustomTextInput.vue";
 import CustomSelectInput from "@/components/inputs/custom-select-input/CustomSelectInput.vue";
-import * as D from "@/duck"
+import * as D from "@/duck";
 
 export default {
   components: {
@@ -46,7 +46,9 @@ export default {
 };
 </script>
 <style scoped>
->>> .col, .col-2, .col-6 {
+>>> .col,
+.col-2,
+.col-6 {
   padding: 0 10px;
 }
 

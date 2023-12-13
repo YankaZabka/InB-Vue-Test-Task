@@ -1,6 +1,13 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 500px">
-    <b-form-checkbox v-model="checked" class="purple-checkbox" @change="onCheckBoxChange">
+  <div
+    class="d-flex justify-content-between align-items-center w-100"
+    style="max-width: 500px"
+  >
+    <b-form-checkbox
+      v-model="checked"
+      class="purple-checkbox"
+      @change="onCheckBoxChange"
+    >
       {{ label }}
     </b-form-checkbox>
 
@@ -19,11 +26,11 @@ import * as A from "@/assets";
 export default {
   props: {
     label: {
-      type: String
+      type: String,
     },
     modalId: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
