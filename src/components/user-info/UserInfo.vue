@@ -1,11 +1,12 @@
 <template>
   <fragment>
-    <ViewInfo v-if="ViewMode" @toggleView="toggleView" :infoData="infoData" />
+    <ViewInfo v-if="ViewMode" @toggleView="toggleView" :infoData="infoData" :class="{ 'slide-in': ViewMode, 'slide-out': !ViewMode }"/>
     <EditInfo
       v-else
       @toggleView="toggleView"
       @updateInfo="updateInfo"
       :infoData="infoData"
+      :class="{ 'slide-in': !ViewMode, 'slide-out': ViewMode }"
     />
   </fragment>
 </template>

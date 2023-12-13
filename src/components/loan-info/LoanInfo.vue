@@ -1,14 +1,18 @@
 <template>
   <b-container class="main-container d-flex">
-    <transition name="slide-fade">
-      <ViewInfo v-if="ViewMode" @toggleView="toggleView" :loanData="loanData" />
-      <EditInfo
-        v-else
-        @toggleView="toggleView"
-        :loanData="loanData"
-        @updateData="updateData"
-      />
-    </transition>
+    <ViewInfo
+      v-if="ViewMode"
+      @toggleView="toggleView"
+      :loanData="loanData"
+      :class="{ 'slide-in': ViewMode, 'slide-out': !ViewMode }"
+    />
+    <EditInfo
+      v-else
+      @toggleView="toggleView"
+      :loanData="loanData"
+      @updateData="updateData"
+      :class="{ 'slide-in': !ViewMode, 'slide-out': ViewMode }"
+    />
   </b-container>
 </template>
 
@@ -52,17 +56,5 @@ export default {
   color: #fdfdfd;
 
   padding: 13px;
-}
-
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-  /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
 }
 </style>
