@@ -1,54 +1,52 @@
 <template>
-    <b-container class="main-container d-flex">
-
-      <transition name="slide-fade">
-        <ViewInfo v-if="ViewMode" @toggleView="toggleView" />
-        <EditInfo v-else @toggleView="toggleView" />
-      </transition>
-
-    </b-container>
+  <b-container class="main-container d-flex">
+    <transition name="slide-fade">
+      <ViewInfo v-if="ViewMode" @toggleView="toggleView" />
+      <EditInfo v-else @toggleView="toggleView" />
+    </transition>
+  </b-container>
 </template>
 
 <script>
-import * as LC from "./components"
+import * as LC from "./components";
 
 export default {
   components: {
     ViewInfo: LC.ViewInfo,
-    EditInfo: LC.EditInfo
+    EditInfo: LC.EditInfo,
   },
   data: function () {
     return {
-      ViewMode: true
-    }
+      ViewMode: true,
+    };
   },
   methods: {
     toggleView() {
-      this.ViewMode = !this.ViewMode
-    }
-  }
-}
+      this.ViewMode = !this.ViewMode;
+    },
+  },
+};
 </script>
 
 <style scoped>
 .main-container {
-  background-color: #2B0A57;
+  background-color: #2b0a57;
   min-height: 58px;
   border-radius: 30px;
   max-width: 800px;
 
   margin-bottom: 10px;
 
-  color: #FDFDFD;
+  color: #fdfdfd;
 
   padding: 13px;
 }
 
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-enter, .slide-fade-leave-to
   /* .slide-fade-leave-active below version 2.1.8 */ {

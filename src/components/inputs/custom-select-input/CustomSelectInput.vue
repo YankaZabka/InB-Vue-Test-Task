@@ -1,14 +1,16 @@
 <template>
-  <div class="form-group"
-       :class="{ 'focused': isFocused }"
-  >
-    <label v-if="label" :style="{ color: isDisabled ? '#9C9C9C' : 'inherit'}">{{ label }}</label>
+  <div class="form-group" :class="{ focused: isFocused }">
+    <label
+      v-if="label"
+      :style="{ color: isDisabled ? '#9C9C9C' : 'inherit' }"
+      >{{ label }}</label
+    >
     <select
-        @focus="isFocused = true"
-        @blur="isFocused = false"
-        :disabled="isDisabled"
-        type="text"
-        v-model="selectedValue"
+      @focus="isFocused = true"
+      @blur="isFocused = false"
+      :disabled="isDisabled"
+      type="text"
+      v-model="selectedValue"
     >
       <option v-for="option in options" :value="option" :key="option">
         {{ option }}
@@ -20,7 +22,7 @@
 export default {
   props: {
     label: {
-      type: String
+      type: String,
     },
     isDisabled: {
       type: Boolean,
@@ -28,12 +30,12 @@ export default {
     },
     placeholder: {
       type: String,
-      default: "Placeholder"
+      default: "Placeholder",
     },
     options: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
@@ -41,49 +43,49 @@ export default {
       isFocused: false,
     };
   },
-}
+};
 </script>
 <style scoped>
-.form-group{
+.form-group {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 
-  border:1px solid #E9E9E9;
+  border: 1px solid #e9e9e9;
   border-radius: 4px;
 
-  padding:18px 18px 18px 20px;
-  margin-top:10px;
+  padding: 18px 18px 18px 20px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
-.form-group>label{
-  position:absolute;
-  top:-1px;
-  left:24px;
-  background-color:white;
+.form-group > label {
+  position: absolute;
+  top: -1px;
+  left: 24px;
+  background-color: white;
   padding: 0 4px;
 }
 
-.form-group>select{
+.form-group > select {
   width: 100%;
-  border:none;
+  border: none;
   outline: none;
   background-color: white;
 }
 
-.form-group>select::placeholder{
+.form-group > select::placeholder {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 }
 
-.form-group>select:disabled {
-  background-color:white;
-  color: #9C9C9C;
+.form-group > select:disabled {
+  background-color: white;
+  color: #9c9c9c;
 }
 
 .focused {
-  border-color: #2B0A57;
+  border-color: #2b0a57;
 }
 </style>

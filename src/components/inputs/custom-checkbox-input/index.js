@@ -1,1 +1,1 @@
-export {default} from './CustomCheckboxInput.vue'
+export { default } from "./CustomCheckboxInput.vue";

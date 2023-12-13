@@ -1,11 +1,11 @@
-export {default as InBankLogo} from './InBankLogo.png'
-export {default as HeaderButton} from './HeaderButton.png'
-export {default as LoanButtonLeft} from './LoanButtonLeft.png'
-export {default as LoanButtonRight} from './LoanButtonRight.png'
-export {default as DropdownToggle} from './Dropdown-toggle.png'
-export {default as UserViewInfoButton} from './UserViewInfoButton.png'
-export {default as UserEditInfoButton} from './UserEditInfoButton.png'
-export {default as UserIdIcon} from './UserIdIcon.png'
-export {default as UserPhoneIcon} from './UserPhoneIcon.png'
-export {default as UserMailIcon} from './UserMailIcon.png'
-export {default as CheckboxInfoIcon} from './CheckboxInfoIcon.png'
+export { default as InBankLogo } from "./InBankLogo.png";
+export { default as HeaderButton } from "./HeaderButton.png";
+export { default as LoanButtonLeft } from "./LoanButtonLeft.png";
+export { default as LoanButtonRight } from "./LoanButtonRight.png";
+export { default as DropdownToggle } from "./Dropdown-toggle.png";
+export { default as UserViewInfoButton } from "./UserViewInfoButton.png";
+export { default as UserEditInfoButton } from "./UserEditInfoButton.png";
+export { default as UserIdIcon } from "./UserIdIcon.png";
+export { default as UserPhoneIcon } from "./UserPhoneIcon.png";
+export { default as UserMailIcon } from "./UserMailIcon.png";
+export { default as CheckboxInfoIcon } from "./CheckboxInfoIcon.png";

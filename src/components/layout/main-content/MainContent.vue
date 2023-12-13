@@ -1,7 +1,7 @@
 <template>
-    <b-container class="centered-container flex-column" style="gap: 21px">
-      <slot></slot>
-    </b-container>
+  <b-container class="centered-container flex-column" style="gap: 21px">
+    <slot></slot>
+  </b-container>
 </template>
 
 <style>

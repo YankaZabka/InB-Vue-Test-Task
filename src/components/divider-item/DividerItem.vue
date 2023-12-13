@@ -1,9 +1,9 @@
 <template>
   <fragment>
     <div class="divider-wrapper">
-      <hr>
+      <hr />
       <span v-if="text">{{ text }}</span>
-      <hr>
+      <hr />
     </div>
   </fragment>
 </template>
@@ -22,7 +22,7 @@
 hr {
   border: 0;
   flex-grow: 1;
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
   height: 1px;
 }
 
@@ -30,7 +30,7 @@ span {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #413C3C;
+  color: #413c3c;
   background-color: white;
   padding: 0 10px;
 }
@@ -39,8 +39,8 @@ span {
 export default {
   props: {
     text: {
-      type: String
-    }
-  }
-}
+      type: String,
+    },
+  },
+};
 </script>

@@ -1,1 +1,1 @@
-export {default} from './SummaryItem.vue'
+export { default } from "./SummaryItem.vue";

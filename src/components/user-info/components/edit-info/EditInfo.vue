@@ -1,31 +1,38 @@
 <template>
   <b-container class="main-container centered-container">
+    <b-row class="row-wrapper m-0">
+      <b-col sm="12" md="4">
+        <div class="centered-container flex-shrink-0">
+          Change your contact Info
+        </div>
+      </b-col>
 
-      <b-row class="row-wrapper m-0">
+      <b-col
+        sm="12"
+        md="7"
+        class="centered-container my-sm-2 my-md-0 justify-content-md-start"
+        style="gap: 20px"
+      >
+        <div class="centered-container" style="gap: 6px">
+          <img :src="UserPhoneIcon" alt="UserPhoneIcon" />
+          <input class="input-element" v-model="editedInfo.userPhone" />
+        </div>
+        <div class="centered-container" style="gap: 6px">
+          <img :src="UserMailIcon" alt="UserMailIcon" />
+          <input
+            class="input-element"
+            v-model="editedInfo.userMail"
+            style="min-width: 150px"
+          />
+        </div>
+      </b-col>
 
-        <b-col sm="12" md="4">
-          <div class="centered-container flex-shrink-0">Change your contact Info</div>
-        </b-col>
-
-        <b-col sm="12" md="7" class="centered-container my-sm-2 my-md-0 justify-content-md-start" style="gap: 20px">
-          <div class="centered-container" style="gap: 6px">
-            <img :src="UserPhoneIcon" alt="UserPhoneIcon" >
-            <input class="input-element" v-model="editedInfo.userPhone">
-          </div>
-          <div class="centered-container" style="gap: 6px">
-            <img :src="UserMailIcon" alt="UserMailIcon" >
-            <input class="input-element" v-model="editedInfo.userMail" style="min-width: 150px">
-          </div>
-        </b-col>
-
-        <b-col sm="12" md="1" class="d-flex justify-content-end p-0">
-          <div class="icon-button toggle-button" @click="toggleView">
-            <img :src="UserViewInfoButton" alt="UserViewInfoButton" >
-          </div>
-        </b-col>
-
-      </b-row>
-
+      <b-col sm="12" md="1" class="d-flex justify-content-end p-0">
+        <div class="icon-button toggle-button" @click="toggleView">
+          <img :src="UserViewInfoButton" alt="UserViewInfoButton" />
+        </div>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -36,8 +43,8 @@ export default {
   props: ["infoData"],
   methods: {
     toggleView() {
-      this.$emit('toggleView');
-      this.$emit('updateInfo', this.editedInfo);
+      this.$emit("toggleView");
+      this.$emit("updateInfo", this.editedInfo);
     },
   },
   data() {
@@ -47,13 +54,13 @@ export default {
       UserMailIcon: A.UserMailIcon,
       UserViewInfoButton: A.UserViewInfoButton,
     };
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
 .main-container {
-  background-color: #F8F5FC;
+  background-color: #f8f5fc;
   min-height: 58px;
 
   border-radius: 30px;
@@ -77,14 +84,14 @@ export default {
 }
 
 .input-element {
-  color: #413C3C;
+  color: #413c3c;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 
   max-width: 80px;
 }
@@ -94,18 +101,18 @@ export default {
   border: none;
   outline: none;
 
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 
 .toggle-button {
-  background-color: #2B0A57;
+  background-color: #2b0a57;
 }
 
 .toggle-button:hover {
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
 }
 
 .toggle-button:hover img {
-  filter: invert(100%) brightness(200%)
+  filter: invert(100%) brightness(200%);
 }
 </style>

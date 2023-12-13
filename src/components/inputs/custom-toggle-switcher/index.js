@@ -1,1 +1,1 @@
-export {default} from './CustomToggleSwitcher.vue';
+export { default } from "./CustomToggleSwitcher.vue";

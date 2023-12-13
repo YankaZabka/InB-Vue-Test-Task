@@ -1,1 +1,1 @@
-export {default} from './DividerItem.vue';
+export { default } from "./DividerItem.vue";

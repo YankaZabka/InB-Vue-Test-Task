@@ -1,1 +1,1 @@
-export {default} from './TextInput.vue'
+export { default } from "./TextInput.vue";

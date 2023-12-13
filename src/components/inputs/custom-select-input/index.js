@@ -1,1 +1,1 @@
-export {default} from './CustomSelectInput.vue'
+export { default } from "./CustomSelectInput.vue";

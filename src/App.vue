@@ -1,32 +1,30 @@
 <template>
   <div id="app">
-    <HeaderItem/>
+    <HeaderItem />
     <MainContent>
+      <LoanInfo />
+      <UserInfo />
 
-      <LoanInfo/>
-      <UserInfo/>
+      <PersonalData />
 
-      <PersonalData/>
+      <DividerItem text="Or" />
 
-      <DividerItem text="Or"/>
-
-      <CustomToggleSwitcher/>
+      <CustomToggleSwitcher />
 
       <DividerItem />
 
-      <CustomCheckboxInput/>
-      <CustomCheckboxInput/>
+      <CustomCheckboxInput />
+      <CustomCheckboxInput />
 
-      <ContinueButton/>
-
+      <ContinueButton />
     </MainContent>
   </div>
 </template>
 <script>
-import * as C from './components'
+import * as C from "./components";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     CustomCheckboxInput: C.Inputs.CustomCheckBoxInput,
     UserInfo: C.UserInfo,
@@ -37,14 +35,14 @@ export default {
     CustomToggleSwitcher: C.Inputs.CustomToggleSwitcher,
     DividerItem: C.DividerItem,
     ContinueButton: C.ContinueButton,
-  }
-}
+  },
+};
 </script>
 
 <style>
 @font-face {
   font-family: OpenSans;
-  src: url('~@/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf');
+  src: url("~@/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 .centered-container {

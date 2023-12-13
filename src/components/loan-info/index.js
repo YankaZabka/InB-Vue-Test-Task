@@ -1,1 +1,1 @@
-export {default} from './LoanInfo.vue'
+export { default } from "./LoanInfo.vue";
