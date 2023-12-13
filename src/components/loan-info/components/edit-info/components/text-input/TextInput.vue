@@ -41,6 +41,17 @@ export default {
       this.isInputFocused = true;
     },
     onInputBlur() {
+      if (this.limits) {
+        const value = parseInt(this.inputValue, 10);
+        if (isNaN(value)) {
+          this.inputValue = '';
+        } else if (value < this.limits.min) {
+          this.inputValue = this.limits.min;
+        } else if (value > this.limits.max) {
+          this.inputValue = this.limits.max;
+        }
+      }
+
       this.isInputFocused = false;
     }
   },
