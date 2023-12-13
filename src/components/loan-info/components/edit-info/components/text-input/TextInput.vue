@@ -26,6 +26,7 @@
       @focus="onInputFocus"
       @blur="onInputBlur"
       @input="onInputChange"
+      :placeholder="placeholder"
     />
 
     <b-dropdown
@@ -55,6 +56,7 @@
 import * as A from "@/assets";
 export default {
   props: {
+    placeholder: String,
     inputValue: String,
     label: String,
     additionalLabel: String,

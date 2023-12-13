@@ -11,6 +11,7 @@
         :limits="{ min: 200, max: 10000 }"
         additional-label="200 - 10 000 €"
         @updateInputValue="updateAmount"
+        placeholder="EUR"
       />
     </b-col>
 
@@ -20,6 +21,7 @@
         label="Duration"
         :limits="{ min: 1, max: 36 }"
         @updateInputValue="updateDuration"
+        placeholder="months"
       />
     </b-col>
 
