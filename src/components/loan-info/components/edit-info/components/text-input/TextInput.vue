@@ -4,11 +4,11 @@
         <!-- LABELS -->
         <div class="d-flex justify-content-center align-items-center flex-column">
           <label class="label-text">{{ label }}</label>
-<!--          <label class="label-text">{{ additionalLabel }}</label>-->
-          <label class="label-text" v-show="isInputFocused && additionalLabel">{{ additionalLabel }}</label>
+          <label class="label-text" v-show="isInputFocused && additionalLabel && !isOutOfRange">{{ additionalLabel }}</label>
+          <span v-show="isOutOfRange" class="label-text" style="color: #EB5757">Out of range</span>
         </div>
 
-        <input class="input-element" v-model="inputValue" @focus="onInputFocus" @blur="onInputBlur"/>
+        <input :class="{ 'border-red': isOutOfRange }" class="input-element" v-model="inputValue" @focus="onInputFocus" @blur="onInputBlur"/>
 
       <b-dropdown size="md"  variant="link" toggle-class="text-decoration-none" no-caret>
         <template #button-content>
@@ -24,7 +24,11 @@
 <script>
 import * as A from "@/assets"
 export default {
-  props: ["label", "additionalLabel", ],
+  props: {
+    label: String,
+    additionalLabel: String,
+    limits: Object
+  },
   data() {
     return {
       inputValue: '',
@@ -39,7 +43,15 @@ export default {
     onInputBlur() {
       this.isInputFocused = false;
     }
-  }
+  },
+  computed: {
+    isOutOfRange() {
+      if (!this.limits) return false;
+
+      const value = parseInt(this.inputValue, 10);
+      return isNaN(value) || value < this.limits.min || value > this.limits.max;
+    }
+  },
 }
 </script>
 
@@ -71,5 +83,9 @@ export default {
   line-height: 24px;
 
   margin-bottom: 0;
+}
+
+.border-red {
+  border-bottom: 1px solid #EB5757;
 }
 </style>

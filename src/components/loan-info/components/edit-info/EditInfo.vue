@@ -1,7 +1,7 @@
 <template>
     <b-row class="h-100 flex-grow-1">
       <b-col md="4" sm="12" class="d-flex justify-content-center justify-content-md-end flex-grow-1">
-        <TextInput label="Amount" additional-label="200 - 10 000 €"/>
+        <TextInput label="Amount" :limits="{min: 200, max: 10000}" additional-label="200 - 10 000 €"/>
       </b-col>
 
       <b-col md="3" sm="12">
