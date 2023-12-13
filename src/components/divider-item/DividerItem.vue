@@ -32,7 +32,7 @@ span {
   line-height: 24px;
   color: #413c3c;
   background-color: white;
-  padding: 0 10px;
+  padding: 0 100px;
 }
 </style>
 <script>

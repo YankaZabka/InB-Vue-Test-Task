@@ -9,12 +9,12 @@
 
       <DividerItem text="Or" />
 
-      <CustomToggleSwitcher />
+      <CustomToggleSwitcher label="Add address manually"/>
 
       <DividerItem />
 
-      <CustomCheckboxInput />
-      <CustomCheckboxInput />
+      <CustomCheckboxInput label="Neither I nor my family member is PEP" modalId="1"/>
+      <CustomCheckboxInput label="I’m the ultimate beneficiary" modalId="2"/>
 
       <ContinueButton />
     </MainContent>

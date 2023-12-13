@@ -1,14 +1,14 @@
 <template>
   <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 500px">
     <b-form-checkbox v-model="checked" class="purple-checkbox">
-      Check me out
+      {{ label }}
     </b-form-checkbox>
 
-    <div class="centered-container" v-b-modal.modal-center>
+    <div class="centered-container" v-b-modal:[modalId]>
       <img :src="CheckboxInfoIcon" alt="Info" />
     </div>
 
-    <b-modal id="modal-center" hide-footer centered title="BootstrapVue">
+    <b-modal :id="modalId" hide-footer centered title="BootstrapVue">
       <p class="my-4">Hello from modal!</p>
     </b-modal>
   </div>
@@ -18,10 +18,12 @@ import * as A from "@/assets";
 
 export default {
   props: {
-    info: {
-      type: String,
-      default: "Placeholder",
+    label: {
+      type: String
     },
+    modalId: {
+      type: String
+    }
   },
   data() {
     return {
