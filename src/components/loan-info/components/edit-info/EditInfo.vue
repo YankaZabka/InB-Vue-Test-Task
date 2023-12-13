@@ -5,7 +5,7 @@
       </b-col>
 
       <b-col md="3" sm="12">
-        <TextInput label="Duration" :additional-label="false"/>
+        <TextInput label="Duration" :limits="{min: 1, max: 36}"/>
       </b-col>
 
       <b-col md="5" sm="12" class="d-flex justify-content-between align-items-center">
