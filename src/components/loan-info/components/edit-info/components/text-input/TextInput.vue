@@ -121,9 +121,9 @@ export default {
         return;
       }
       this.dropdownOptions = [
-        currentVal - 300,
-        currentVal - 200,
-        currentVal - 100,
+        currentVal - (optionDiffer * 3),
+        currentVal - (optionDiffer * 2),
+        currentVal - (optionDiffer * 1),
         currentVal,
       ];
     },
