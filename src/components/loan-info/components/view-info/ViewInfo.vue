@@ -9,7 +9,7 @@
     <b-col cols="10" class="d-flex justify-content-center flex-wrap">
       <div class="final-text centered-container">Your loan application</div>
       <div class="final-sum centered-container">
-        2700<sup>€</sup> / 36 months
+        {{ loanData.amount }}<sup>€</sup> / {{ loanData.duration }} months
       </div>
     </b-col>
 
@@ -20,6 +20,7 @@
 import * as A from "@/assets";
 
 export default {
+  props: ["loanData"],
   methods: {
     toggleView() {
       this.$emit("toggleView");

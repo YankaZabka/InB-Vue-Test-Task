@@ -22,7 +22,7 @@
     <input
       :class="{ 'border-red': isOutOfRange && isInputChanged }"
       class="input-element"
-      v-model="inputValue"
+      v-model="editedInputValue"
       @focus="onInputFocus"
       @blur="onInputBlur"
       @input="onInputChange"
@@ -55,13 +55,14 @@
 import * as A from "@/assets";
 export default {
   props: {
+    inputValue: String,
     label: String,
     additionalLabel: String,
     limits: Object,
   },
   data() {
     return {
-      inputValue: "",
+      editedInputValue: this.inputValue,
       isInputFocused: false,
       isInputChanged: false,
 
@@ -71,6 +72,8 @@ export default {
   },
   methods: {
     onInputChange() {
+      this.$emit("updateInputValue", String(this.editedInputValue));
+
       if (!this.isInputChanged) {
         this.isInputChanged = true;
       }
@@ -80,16 +83,17 @@ export default {
     },
     onInputBlur() {
       if (this.limits) {
-        const value = parseInt(this.inputValue, 10);
+        const value = parseInt(this.editedInputValue, 10);
         if (isNaN(value)) {
-          this.inputValue = this.limits.min;
+          this.editedInputValue = this.limits.min;
         } else if (value < this.limits.min) {
-          this.inputValue = this.limits.min;
+          this.editedInputValue = this.limits.min;
         } else if (value > this.limits.max) {
-          this.inputValue = this.limits.max;
-        }
+          this.editedInputValue = this.limits.max;
+        } else this.editedInputValue = value;
       }
 
+      this.$emit("updateInputValue", String(this.editedInputValue));
       this.generateDropdownOptions();
       this.isInputFocused = false;
     },
@@ -99,7 +103,7 @@ export default {
         return;
       }
 
-      const currentVal = parseInt(this.inputValue, 10) || this.limits.min;
+      const currentVal = parseInt(this.editedInputValue, 10) || this.limits.min;
       const optionDiffer = this.limits.min >= 100 ? 100 : 1;
 
       if (currentVal - 4 * optionDiffer < this.limits.min) {
@@ -123,14 +127,15 @@ export default {
     },
 
     setInputValue(value) {
-      this.inputValue = value;
+      this.editedInputValue = value;
+      this.$emit("updateInputValue", String(this.editedInputValue));
     },
   },
   computed: {
     isOutOfRange() {
       if (!this.limits) return false;
 
-      const value = parseInt(this.inputValue, 10);
+      const value = parseInt(this.editedInputValue, 10);
       return isNaN(value) || value < this.limits.min || value > this.limits.max;
     },
   },

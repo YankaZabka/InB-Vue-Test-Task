@@ -7,13 +7,20 @@
     >
       <TextInput
         label="Amount"
+        :input-value="loanData.amount"
         :limits="{ min: 200, max: 10000 }"
         additional-label="200 - 10 000 €"
+        @updateInputValue="updateAmount"
       />
     </b-col>
 
     <b-col md="3" sm="12">
-      <TextInput label="Duration" :limits="{ min: 1, max: 36 }" />
+      <TextInput
+        :input-value="loanData.duration"
+        label="Duration"
+        :limits="{ min: 1, max: 36 }"
+        @updateInputValue="updateDuration"
+      />
     </b-col>
 
     <b-col
@@ -21,7 +28,7 @@
       sm="12"
       class="d-flex justify-content-between align-items-center"
     >
-      <SummaryItem />
+      <SummaryItem :loanData="loanData"/>
       <div class="icon-button toggle-button flex-shrink-0" @click="toggleView">
         <img :src="LoanButtonRight" alt="LoanButtonRight" />
       </div>
@@ -33,6 +40,7 @@ import * as A from "@/assets";
 import * as LC from "./components";
 
 export default {
+  props: ["loanData"],
   components: {
     SummaryItem: LC.SummaryItem,
     TextInput: LC.TextInput,
@@ -40,6 +48,12 @@ export default {
   methods: {
     toggleView() {
       this.$emit("toggleView");
+    },
+    updateAmount(newAmount) {
+      this.$emit("updateData", { ...this.loanData, amount: newAmount });
+    },
+    updateDuration(newDuration) {
+      this.$emit("updateData", { ...this.loanData, duration: newDuration });
     },
   },
   data: function () {

@@ -4,10 +4,14 @@
     style="gap: 12px"
   >
     <div style="font-weight: 300">Monthly Payment</div>
-    <div>95,27<sup>€</sup></div>
+    <div>{{ (loanData.amount / loanData.duration).toFixed(1) }}<sup>€</sup></div>
   </div>
 </template>
-
+<script>
+export default {
+  props: ["loanData"],
+};
+</script>
 <style scoped>
 .wrapper {
   background-color: #3a156c;

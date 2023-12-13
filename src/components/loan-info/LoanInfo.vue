@@ -1,8 +1,8 @@
 <template>
   <b-container class="main-container d-flex">
     <transition name="slide-fade">
-      <ViewInfo v-if="ViewMode" @toggleView="toggleView" />
-      <EditInfo v-else @toggleView="toggleView" />
+      <ViewInfo v-if="ViewMode" @toggleView="toggleView" :loanData="loanData"/>
+      <EditInfo v-else @toggleView="toggleView" :loanData="loanData" @updateData="updateData"/>
     </transition>
   </b-container>
 </template>
@@ -18,11 +18,19 @@ export default {
   data: function () {
     return {
       ViewMode: true,
+
+      loanData: {
+        amount: "2700",
+        duration: "15",
+      }
     };
   },
   methods: {
     toggleView() {
       this.ViewMode = !this.ViewMode;
+    },
+    updateData(newData) {
+      this.loanData = newData;
     },
   },
 };
