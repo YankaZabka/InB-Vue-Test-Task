@@ -11,5 +11,8 @@
   font-weight: 600;
   line-height: 24px;
   padding: 12px 30px;
+
+  max-width: 372px;
+  margin-bottom: 62px;
 }
 </style>

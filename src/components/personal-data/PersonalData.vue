@@ -1,5 +1,5 @@
 <template>
-  <b-container class="main-container">
+  <b-container>
     <b-row class="mb-3">
       <b-col>
         <div class="title-text">Personal Data</div>
@@ -52,10 +52,6 @@ export default {
 };
 </script>
 <style scoped>
-.main-container {
-  max-width: 800px;
-}
-
 .title-text {
   font-size: 16px;
   line-height: 24px;

@@ -115,7 +115,6 @@ export default {
   min-height: 58px;
 
   border-radius: 30px;
-  max-width: 800px;
 
   margin-bottom: 10px;
 
