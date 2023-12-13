@@ -1,5 +1,5 @@
 <template>
-  <b-container class="main-container">
+  <b-container class="main-container" style="z-index: 0">
     <b-row class="first-row mx-3">
       <b-col cols="2"></b-col>
       <b-col cols="8">

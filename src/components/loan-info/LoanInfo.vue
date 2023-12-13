@@ -1,5 +1,5 @@
 <template>
-  <b-container class="main-container d-flex">
+  <b-container class="main-container d-flex" style="z-index: 1">
     <ViewInfo
       v-if="ViewMode"
       @toggleView="toggleView"

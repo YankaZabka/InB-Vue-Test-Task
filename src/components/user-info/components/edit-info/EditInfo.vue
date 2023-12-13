@@ -1,5 +1,5 @@
 <template>
-  <b-container class="main-container centered-container">
+  <b-container class="main-container centered-container" style="z-index: 0">
     <b-row class="row-wrapper m-0">
       <b-col sm="12" md="4">
         <div class="centered-container flex-column flex-shrink-0">
